@@ -1,0 +1,10 @@
+yarn typeorm migration:run
+
+yarn typeorm migration:revert
+
+yarn typeorm migration:create -n CreateUsers
+
+
+//Criação de migration para alteração de campo especifico.
+
+yarn typeorm migration:create -n AlterProviderFieldtoProviderId
