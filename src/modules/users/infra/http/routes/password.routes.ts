@@ -3,6 +3,7 @@ import ForgotPasswordController from '@modules/users/infra/http/controllers/Forg
 import ResetPasswordController from '@modules/users/infra/http/controllers/ResetPasswordController';
 
 const passwordRouter = Router();
+
 const forgotPasswordController = new ForgotPasswordController();
 const resetPasswordController = new ResetPasswordController();
 
