@@ -24,7 +24,7 @@ class CreateAppointmentService {
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
     @inject('HashProvider')
-    private hashProviders: IHashProvider,
+    private hashProvider: IHashProvider,
   ) {}
 
   public async execute({ email, password }: IRequestDTO): Promise<IResponse> {
@@ -33,7 +33,7 @@ class CreateAppointmentService {
     if (!user) {
       throw new AppError('Incorrect email/password combination.', 401);
     }
-    const passwordMatched = await this.hashProviders.compareHash(
+    const passwordMatched = await this.hashProvider.compareHash(
       password,
       user.password,
     );
