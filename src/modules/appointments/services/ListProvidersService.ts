@@ -15,11 +15,11 @@ class ListProvidersService {
   ) {}
 
   public async execute({ user_id }: IRequestDTO): Promise<User[]> {
-    const users = await this.usersRepository.findAllProviders({
+    const providers = await this.usersRepository.findAllProviders({
       except_user_id: user_id,
     });
 
-    return users;
+    return providers;
   }
 }
 
