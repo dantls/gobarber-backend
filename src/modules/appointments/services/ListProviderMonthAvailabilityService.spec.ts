@@ -70,7 +70,6 @@ describe('ListProvidersMonth', () => {
     });
 
     const availability = await listProviderMonthAvailability.execute({
-      user_id: 'user',
       provider_id: 'provider',
       year: 2020,
       month: 5,

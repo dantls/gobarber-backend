@@ -5,7 +5,6 @@ import IAppointmentsRepository from '@modules/appointments/repositories/IAppoint
 
 interface IRequestDTO {
   provider_id: string;
-  user_id: string;
   month: number;
   year: number;
 }
